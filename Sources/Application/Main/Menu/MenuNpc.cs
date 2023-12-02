@@ -97,13 +97,8 @@ namespace NRO_Server.Main.Menu
             {
                 "Nhận ngọc",
                 "Nhận vàng",
-                //"Giftcode",
-               // "Nhận Đệ tử",
+                "Nhận Đệ tử",
                 "Đổi\nMật khẩu",
-                //"Bật/Tắt\nhiệu ứng\nđánh boss",
-                "BXH\nSự kiện\nTop nạp",
-                "BXH\nSự kiện\nSức mạnh",
-                // "Đổi máy chủ"
             },
             new List<string>()
             {

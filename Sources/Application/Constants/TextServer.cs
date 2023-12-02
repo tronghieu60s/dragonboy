@@ -28,8 +28,8 @@ namespace NRO_Server.Application.Constants
         public readonly string UPDATING = "Chức năng này đang được cập nhật";
         public readonly string MAINTENANCE = "Hệ thống sẽ bảo trì sau {0} phút nữa, vui lòng thoát game";
         public readonly string ERROR_ADMIN = "Có lỗi xảy ra, vui lòng liên hệ ADMIN để biết thêm chi tiết";
-        public readonly string LOCK_LOGIN = "Vui lòng đăng ký tài khoản tại Key Vàng box Zalo NRO HYDRA để vào game";
-        public readonly string NOT_ACTIVE = "Tài khoản của bạn chưa được kích hoạt\nTruy cập NRO HYDRA để kích hoạt tài khoản với phí chỉ 20k VNĐ bằng cách nạp card.";
+        public readonly string LOCK_LOGIN = "Hiện tại chưa có chức năng đăng ký tài khoản trong game.";
+        public readonly string NOT_ACTIVE = "Tài khoản của bạn chưa được kích hoạt.";
         public readonly string USER_LOCK = "Tài khoản của bạn bị khoá do vi phạm quy định Server";
         public readonly string DUPLICATE_LOGIN = "Có người đăng nhập vào tài khoản của bạn";
         public readonly string DUPLICATE_LOGIN2 = "Tài khoản của bạn đã được đăng nhập ở nơi khác, hãy thử lại sau";

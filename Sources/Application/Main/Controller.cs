@@ -4572,7 +4572,7 @@ namespace NRO_Server.Application.Main
 
                         if (isOnline)
                         {
-                            _session.SendMessage(Service.DialogMessage("Không đổi mạng khi đang chơi ! Liên hệ AD hoặc đợi bảo trì để vào game !!!"));
+                            _session.SendMessage(Service.DialogMessage("Tài khoản này hiện đang online trong máy chủ"));
                             return;
                         }
 

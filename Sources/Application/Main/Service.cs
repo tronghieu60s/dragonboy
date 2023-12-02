@@ -1234,7 +1234,7 @@ namespace NRO_Server.Application.Main
             {
                 var message = new Message(-70);
                 message.Writer.WriteShort(1139);
-                message.Writer.WriteUTF("|2|Chào mừng đến với NRO Free\n|7|Hãy Theo dõi server thông qua Box Zalo Hoặc Facebook để cập nhật thông tin");
+                message.Writer.WriteUTF("|2|Chào mừng đến với Vũ Trụ Test.\n|7|Chúc bạn trải nghiệm chơi game vui vẻ.");
                 message.Writer.WriteByte(0);
                 return message;
             }
