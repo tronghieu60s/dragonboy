@@ -45,8 +45,8 @@
             "user": "root",
             "password": "",
             "database": {
-                "data": "dragonboy_data",
-                "account": "dragonboy_acc"
+                "data": "nro_data",
+                "account": "nro_data"
             }
         }
     },
