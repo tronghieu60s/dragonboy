@@ -45,8 +45,8 @@
             "user": "root",
             "password": "",
             "database": {
-                "data": "nro_data",
-                "account": "nro_data"
+                "data": "nro_stag_data",
+                "account": "nro_stag_acc"
             }
         }
     },
