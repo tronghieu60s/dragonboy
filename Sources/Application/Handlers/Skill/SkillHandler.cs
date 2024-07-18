@@ -2485,22 +2485,22 @@ namespace NRO_Server.Application.Handlers.Skill
                 listPlayer.Add(charAtt);
 
                 var fightSize = 1;
-                while (message.Reader.Available() > 0)
-                {
-                    var charNextId = message.Reader.ReadInt();
-                    var charNext = zone.ZoneHandler.GetCharacter(charNextId);
-                    if (CharIdIsBoss(charNextId)) 
-                    {
-                        charNext = zone.ZoneHandler.GetBoss(charNextId);
-                    }
-                    if (charNext == null || charNext.InfoChar.IsDie) continue;
-                    fightSize += 1;
-                    if (fightSize >= skillData.MaxFight)
-                    {
-                        break;
-                    }
-                    listPlayer.Add(charNext);
-                }
+                //while (message.Reader.Available() > 0)
+                //{
+                //    var charNextId = message.Reader.ReadInt();
+                //    var charNext = zone.ZoneHandler.GetCharacter(charNextId);
+                //    if (CharIdIsBoss(charNextId)) 
+                //    {
+                //        charNext = zone.ZoneHandler.GetBoss(charNextId);
+                //    }
+                //    if (charNext == null || charNext.InfoChar.IsDie) continue;
+                //    fightSize += 1;
+                //    if (fightSize >= skillData.MaxFight)
+                //    {
+                //        break;
+                //    }
+                //    listPlayer.Add(charNext);
+                //}
                 //Handling player attack with skill
                 Server.Gi().Logger.Debug($"Client: {character.Player.Session.Id} --------------- AttackPlayer - SkillTemplate: {skillTemplate.Id}");
                 //Check skill
@@ -2893,7 +2893,7 @@ namespace NRO_Server.Application.Handlers.Skill
             var player = characters.FirstOrDefault(c => c != null && !c.InfoChar.IsDie &&
                                                         Math.Abs(character.InfoChar.X - c.InfoChar.X) <= skillDataTemplate.Dx
                                                         && Math.Abs(character.InfoChar.Y - c.InfoChar.Y) <= skillDataTemplate.Dy);
-            if(player == null) return;
+            if (player == null) return;
 
             if (!CharIdIsBoss(player.Id) && !CharIdIsBoss(character.Id)) //Nếu ko phải là boss, là người thì kiểm tra
             {
@@ -3091,19 +3091,19 @@ namespace NRO_Server.Application.Handlers.Skill
                 }
                 // Last dmg boss
                 var thodaik = false;
-                if (CharIdIsBoss(player.Id) && character != null)
-                {
-                    var bossReal = (Boss) player;
-                    if (!bossReal.CharacterAttack.Contains(character.Id) && !character.InfoSkill.Socola.IsSocola)
-                    {
-                        bossReal.CharacterAttack.Add(character.Id);
-                    }
-                    if (bossReal.Type == DataCache.BOSS_THO_PHE_CO_TYPE)
-                    {
-                        damage = 1; // nếu là boss thỏ thì set dame 1
-                        thodaik = true;
-                    }
-                }
+                //if (CharIdIsBoss(player.Id) && character != null)
+                //{
+                //    var bossReal = (Boss) player;
+                //    if (!bossReal.CharacterAttack.Contains(character.Id) && !character.InfoSkill.Socola.IsSocola)
+                //    {
+                //        bossReal.CharacterAttack.Add(character.Id);
+                //    }
+                //    if (bossReal.Type == DataCache.BOSS_THO_PHE_CO_TYPE)
+                //    {
+                //        damage = 1; // nếu là boss thỏ thì set dame 1
+                //        thodaik = true;
+                //    }
+                //}
                 if (character.InfoSkill.Socola.IsSocola) damage = 0;
                 player.CharacterHandler.MineHp(damage);
                 player.CharacterHandler.SendZoneMessage(Service.PlayerLevel(player));

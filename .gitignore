@@ -36,6 +36,7 @@ Desktop.ini
 /logging/*
 logging/*
 
-# Remove App, RES
+# Remove DB, App, RES
+DB
 App
 RES
